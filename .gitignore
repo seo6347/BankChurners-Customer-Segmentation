@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated analysis outputs can be regenerated from notebooks.
+outputs/
+reports/figures/*.html
+reports/figures/*.png
+data/analysis/**/*.html
+data/analysis/**/*.png
+data/analysis/**/*.csv
+
+# Keep data folders but avoid accidentally committing raw sensitive data if needed.
+# data/raw/*.csv
+# data/interim/*.csv

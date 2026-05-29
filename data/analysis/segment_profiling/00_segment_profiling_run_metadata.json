@@ -1,0 +1,13 @@
+{
+    "selected_key": "core_7_KMeans_k4",
+    "feature_columns": [
+        "Activity_Score",
+        "Count_Decline_Risk_Score",
+        "Amount_Decline_Risk_Score",
+        "Inactivity_Score",
+        "Product_Relationship_Score",
+        "Contact_Burden_Score",
+        "Credit_Utilization_Score"
+    ],
+    "output_dir": "data\\analysis\\segment_profiling"
+}

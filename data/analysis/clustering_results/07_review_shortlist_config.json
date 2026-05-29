@@ -1,0 +1,25 @@
+{
+    "purpose": "Compare core_7 KMeans k=4,5,6 before/final segment selection.",
+    "review_feature_set": "core_7",
+    "review_algorithm": "KMeans",
+    "review_k_values": [
+        4,
+        5,
+        6
+    ],
+    "review_keys": [
+        "core_7_KMeans_k4",
+        "core_7_KMeans_k5",
+        "core_7_KMeans_k6"
+    ],
+    "final_selected_key": "core_7_KMeans_k5",
+    "selection_method": "manual_override_after_visual_diagnostics: selected core_7_KMeans_k5 based on interpretability, attrition separation, cluster size balance, and comparison with k=4/k=6",
+    "reproducibility_config": {
+        "random_state": 42,
+        "pythonhashseed": "42",
+        "kmeans_n_init": 30,
+        "gmm_n_init": 5,
+        "note": "PYTHONHASHSEED is most effective when set before the Python process starts. random.seed and np.random.seed are set for this notebook run."
+    },
+    "note": "The final selected model is fixed as core_7_KMeans_k5 after comparing cluster profile heatmaps, attrition rates, cluster sizes, high-risk signal counts, and interpretability across k=4,5,6."
+}

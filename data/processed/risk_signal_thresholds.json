@@ -1,0 +1,7 @@
+{
+    "ct_change_q20": 0.545,
+    "amt_change_q20": 0.604,
+    "trans_ct_q20": 41.0,
+    "high_inactive_threshold": 4,
+    "high_contact_threshold": 4
+}

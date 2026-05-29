@@ -5,9 +5,6 @@ BankChurners 고객 세그먼트 분석 프로젝트 폴더 구조 초기화 스
 
 권장 실행:
     python folder_setup.py
-
-기존 관리 폴더를 완전히 지우고 다시 생성:
-    python folder_setup.py --reset-all-managed --yes
 """
 
 from __future__ import annotations

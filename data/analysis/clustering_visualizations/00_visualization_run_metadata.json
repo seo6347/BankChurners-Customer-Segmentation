@@ -1,0 +1,14 @@
+{
+    "step": "Step 4.5 Clustering Visualization / Diagnostics",
+    "review_keys": [
+        "core_7_KMeans_k4",
+        "core_7_KMeans_k5",
+        "core_7_KMeans_k6"
+    ],
+    "final_model_key": "core_7_KMeans_k5",
+    "input_dir": "data\\analysis\\clustering_results",
+    "output_dir": "data\\analysis\\clustering_visualizations",
+    "final_report_dir": "data\\analysis\\clustering_visualizations\\_final_selected_model_core7_kmeans_k5",
+    "random_state": 42,
+    "purpose": "Compare visual diagnostics for core_7 KMeans k=4,5,6 and create a report-ready visualization folder for the final k=5 model."
+}

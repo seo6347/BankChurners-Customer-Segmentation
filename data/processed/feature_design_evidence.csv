@@ -1,0 +1,9 @@
+﻿check,value,interpretation
+open_to_buy_identity_max_abs_error,5.684341886080802e-14,0에 가까우면 Avg_Open_To_Buy가 Credit_Limit - Total_Revolving_Bal과 중복됨
+activity_pair_corr,0.9069570616574846,거래 횟수와 log 거래 금액이 카드 사용 활성도라는 공통 축으로 묶일 수 있는지 확인
+decline_pair_corr,0.38418925603371573,거래 횟수 변화율과 거래 금액 변화율을 하나로 묶을지 또는 분리할지 확인
+relationship_pair_corr,-0.009203080231275048,상품 수와 이용 기간을 하나의 관계 강도 축으로 묶을 수 있는지 확인
+attrition_corr_total_relationship_count,-0.15000522801913768,관계 상품 수와 이탈 여부의 선형 관계 참고
+attrition_corr_months_on_book,0.013686851177909801,이용 기간과 이탈 여부의 선형 관계 참고
+attrition_corr_count_change,-0.29005400688089117,거래 횟수 변화율의 사후 검증용 이탈 관련성 참고
+attrition_corr_amount_change,-0.13106284781447014,거래 금액 변화율의 사후 검증용 이탈 관련성 참고

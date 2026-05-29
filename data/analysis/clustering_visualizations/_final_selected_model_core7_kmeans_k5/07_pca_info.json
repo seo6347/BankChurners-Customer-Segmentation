@@ -1,0 +1,22 @@
+{
+    "feature_columns": [
+        "Activity_Score",
+        "Count_Decline_Risk_Score",
+        "Amount_Decline_Risk_Score",
+        "Inactivity_Score",
+        "Product_Relationship_Score",
+        "Contact_Burden_Score",
+        "Credit_Utilization_Score"
+    ],
+    "pca_2d_explained_variance_ratio": [
+        0.21150552727579042,
+        0.18617989549112804
+    ],
+    "pca_2d_cumulative_explained_variance": 0.39768542276691843,
+    "pca_3d_explained_variance_ratio": [
+        0.21150552727579042,
+        0.18617989549112804,
+        0.14619727668618002
+    ],
+    "pca_3d_cumulative_explained_variance": 0.5438826994530984
+}

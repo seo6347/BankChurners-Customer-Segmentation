@@ -1,0 +1,20 @@
+{
+    "key": "core_7_KMeans_k5",
+    "feature_set": "core_7",
+    "n_clusters": 5,
+    "min_cluster_ratio": 0.09854843487706132,
+    "max_cluster_ratio": 0.23432408413152958,
+    "mean_feature_range": 1.730010135690889,
+    "max_feature_range": 2.3900053432695145,
+    "mean_abs_cluster_mean": 0.4429581002288381,
+    "pca_2d_explained_variance": 0.39768542276691843,
+    "pca_3d_explained_variance": 0.5438826994530984,
+    "attrition_rate_range": 0.41042342274244903,
+    "high_risk_signal_range": 1.3045196349807655,
+    "silhouette": 0.1449314057659825,
+    "davies_bouldin": 1.8379401326049751,
+    "calinski_harabasz": 1441.3791649047903,
+    "internal_rank_score": 0.24,
+    "business_rank_score": 0.5733333333333333,
+    "overall_rank_score": 0.3233333333333333
+}

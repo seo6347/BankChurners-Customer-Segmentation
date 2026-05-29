@@ -1,0 +1,8 @@
+{
+    "explained_variance_ratio": [
+        0.33473625187425077,
+        0.2870198641002768,
+        0.21386254881079395
+    ],
+    "note": "LDA uses cluster labels to emphasize between-cluster differences. It is a supervised visualization of derived clusters, not evidence that natural clusters are perfectly separated."
+}

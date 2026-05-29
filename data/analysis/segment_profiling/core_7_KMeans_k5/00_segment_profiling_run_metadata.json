@@ -1,0 +1,28 @@
+{
+    "final_model_key": "core_7_KMeans_k5",
+    "feature_set": "core_7",
+    "n_clusters": 5,
+    "feature_columns": [
+        "Activity_Score",
+        "Count_Decline_Risk_Score",
+        "Amount_Decline_Risk_Score",
+        "Inactivity_Score",
+        "Product_Relationship_Score",
+        "Contact_Burden_Score",
+        "Credit_Utilization_Score"
+    ],
+    "random_state": 42,
+    "input_dir": "data\\analysis\\clustering_results",
+    "output_dir": "data\\analysis\\segment_profiling\\core_7_KMeans_k5",
+    "used_final_segment_table": true,
+    "final_segment_table_path": "data\\analysis\\clustering_results\\13_final_customer_segments_core7_kmeans_k5.csv",
+    "selected_key_from_step4": "core_7_KMeans_k5",
+    "segment_name_map": {
+        "0": "상품 관계 중심 저위험 안정군",
+        "1": "신용 활용 중심 저위험 금융활용군",
+        "2": "고활동·저관계 잠재 전환군",
+        "3": "거래 감소·저활동·접촉 부담형 초고위험 이탈군",
+        "4": "저활동·비감소형 초저위험 안정군"
+    },
+    "note": "Step 5 does not refit clustering. It profiles the final core_7_KMeans_k5 labels created in Step 4. High_Risk_Signal_Count is a mean count of customer-level risk flags, not a model rank score."
+}

@@ -1,0 +1,52 @@
+{
+    "n_rows": 10127,
+    "n_candidate_models": 18,
+    "feature_sets": {
+        "core_7": [
+            "Activity_Score",
+            "Count_Decline_Risk_Score",
+            "Amount_Decline_Risk_Score",
+            "Inactivity_Score",
+            "Product_Relationship_Score",
+            "Contact_Burden_Score",
+            "Credit_Utilization_Score"
+        ],
+        "core_7_plus_capacity": [
+            "Activity_Score",
+            "Count_Decline_Risk_Score",
+            "Amount_Decline_Risk_Score",
+            "Inactivity_Score",
+            "Product_Relationship_Score",
+            "Contact_Burden_Score",
+            "Credit_Utilization_Score",
+            "Credit_Capacity_Score"
+        ]
+    },
+    "algorithms": [
+        "KMeans",
+        "GMM",
+        "Agglomerative_Ward"
+    ],
+    "k_values": [
+        4,
+        5,
+        6
+    ],
+    "selected_key": "core_7_KMeans_k5",
+    "selection_method": "manual_override_after_visual_diagnostics: selected core_7_KMeans_k5 based on interpretability, attrition separation, cluster size balance, and comparison with k=4/k=6",
+    "reproducibility_config": {
+        "random_state": 42,
+        "pythonhashseed": "42",
+        "kmeans_n_init": 30,
+        "gmm_n_init": 5,
+        "note": "PYTHONHASHSEED is most effective when set before the Python process starts. random.seed and np.random.seed are set for this notebook run."
+    },
+    "final_outputs": [
+        "09_selected_model.json",
+        "09_final_selected_model_core7_kmeans_k5.json",
+        "10_selected_cluster_labels.csv",
+        "10_selected_model_profile_summary.csv",
+        "13_final_customer_segments_core7_kmeans_k5.csv",
+        "selected_clustering_model_core7_kmeans_k5.joblib"
+    ]
+}

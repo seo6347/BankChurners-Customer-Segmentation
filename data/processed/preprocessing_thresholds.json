@@ -1,0 +1,44 @@
+{
+    "Total_Ct_Chng_Q4_Q1_clip": {
+        "lower_quantile": 0.01,
+        "upper_quantile": 0.99,
+        "lower_value": 0.231,
+        "upper_value": 1.455
+    },
+    "Total_Amt_Chng_Q4_Q1_clip": {
+        "lower_quantile": 0.01,
+        "upper_quantile": 0.99,
+        "lower_value": 0.34026,
+        "upper_value": 1.5147399999999998
+    },
+    "Low_Utilization_Flag": {
+        "quantile": 0.2,
+        "threshold_value": 0.0
+    },
+    "High_Inactive_Flag": {
+        "quantile": 0.8,
+        "threshold_value": 3.0
+    },
+    "Low_Ct_Change_Flag": {
+        "quantile": 0.2,
+        "threshold_value": 0.545
+    },
+    "Low_Amt_Change_Flag": {
+        "quantile": 0.2,
+        "threshold_value": 0.604
+    },
+    "High_Contact_Flag": {
+        "quantile": 0.8,
+        "threshold_value": 3.0
+    },
+    "High_Risk_Signal_Count": {
+        "components": [
+            "High_Inactive_Flag",
+            "Low_Ct_Change_Flag",
+            "Low_Amt_Change_Flag",
+            "High_Contact_Flag",
+            "Low_Relationship_Flag",
+            "Low_Utilization_Flag"
+        ]
+    }
+}

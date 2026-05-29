@@ -1,0 +1,54 @@
+{
+    "step": "Step 3.5 Further Preprocessing",
+    "input_file": "data\\interim\\BankChurners_Final_Preprocessed.csv",
+    "output_files": {
+        "cluster_input": "data/processed/BankChurners_cluster_input.csv",
+        "profile_table": "data/processed/BankChurners_profile_table.csv",
+        "axis_features_raw": "data/processed/BankChurners_axis_features_raw.csv",
+        "component_features": "data/processed/BankChurners_component_features.csv"
+    },
+    "feature_sets": {
+        "core_7": [
+            "Activity_Score",
+            "Count_Decline_Risk_Score",
+            "Amount_Decline_Risk_Score",
+            "Inactivity_Score",
+            "Product_Relationship_Score",
+            "Contact_Burden_Score",
+            "Credit_Utilization_Score"
+        ],
+        "core_7_plus_capacity": [
+            "Activity_Score",
+            "Count_Decline_Risk_Score",
+            "Amount_Decline_Risk_Score",
+            "Inactivity_Score",
+            "Product_Relationship_Score",
+            "Contact_Burden_Score",
+            "Credit_Utilization_Score",
+            "Credit_Capacity_Score"
+        ]
+    },
+    "cluster_input_columns": [
+        "Activity_Score",
+        "Count_Decline_Risk_Score",
+        "Amount_Decline_Risk_Score",
+        "Inactivity_Score",
+        "Product_Relationship_Score",
+        "Contact_Burden_Score",
+        "Credit_Utilization_Score",
+        "Credit_Capacity_Score"
+    ],
+    "risk_signal_columns": [
+        "Strong_Decline_Flag",
+        "Decline_Low_Activity_Flag",
+        "High_Inactive_Flag",
+        "High_Contact_Flag",
+        "Low_Bank_Product_Count_Flag",
+        "Zero_Utilization_Flag"
+    ],
+    "notes": [
+        "Attrition_Flag is excluded from clustering input and used only for profiling.",
+        "Demographic and label-encoded categorical variables are excluded from clustering input.",
+        "Credit_Capacity_Score is available for comparison but not required in the core behavior feature set."
+    ]
+}

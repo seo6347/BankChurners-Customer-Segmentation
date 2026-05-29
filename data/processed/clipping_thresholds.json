@@ -1,0 +1,10 @@
+{
+    "Total_Ct_Chng_Q4_Q1": {
+        "lower_q01": 0.231,
+        "upper_q99": 1.455
+    },
+    "Total_Amt_Chng_Q4_Q1": {
+        "lower_q01": 0.34026,
+        "upper_q99": 1.5147399999999998
+    }
+}

@@ -262,7 +262,7 @@ Feature Importance는 모델이 어떤 feature를 중요하게 사용했는지 �
 예시 문장:
 
 ```text
-본 단계에서는 Step5에서 도출한 최종 k=5 세그먼트 label을 target으로 설정하고, 고객 행동을 요약한 core_7 feature를 입력 변수로 사용하여 multi-class classification을 수행하였다. Logistic Regression, Decision Tree, Random Forest를 비교하였으며, 전체 정확도뿐 아니라 segment별 성능을 확인하기 위해 Macro F1-score와 confusion matrix를 함께 검토하였다.
+본 단계에서는 Step5에서 도출한 최종 k=5 세그먼트 label을 target으로 설정하고, 고객 행동을 요약한 core_7 feature를 입력 변수로 사용하여 multi-class classification을 수행하였다. Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM을 비교하였으며, 전체 정확도뿐 아니라 segment별 성능을 확인하기 위해 Macro F1-score와 confusion matrix를 함께 검토하였다.
 ```
 
 ---
@@ -272,13 +272,14 @@ Feature Importance는 모델이 어떤 feature를 중요하게 사용했는지 �
 Step6 담당자는 다음 파일을 만들어 제출하면 된다.
 
 ```text
-data/analysis/classification/core_7_KMeans_k5/01_classification_metrics_summary.csv
-data/analysis/classification/core_7_KMeans_k5/02_classification_report_by_segment.csv
-data/analysis/classification/core_7_KMeans_k5/03_confusion_matrix.csv
-data/analysis/classification/core_7_KMeans_k5/04_confusion_matrix.png
-data/analysis/classification/core_7_KMeans_k5/05_feature_importance_random_forest.csv
-data/analysis/classification/core_7_KMeans_k5/06_feature_importance_random_forest.png
-data/analysis/classification/core_7_KMeans_k5/09_step6_classification_summary.md
+data/analysis/segment_classification/core_7_KMeans_k5/01_classification_metrics_summary.csv
+data/analysis/segment_classification/core_7_KMeans_k5/02_classification_report_{model}.csv
+data/analysis/segment_classification/core_7_KMeans_k5/03_confusion_matrix_{model}.csv
+data/analysis/segment_classification/core_7_KMeans_k5/06_model_comparison.png
+data/analysis/segment_classification/core_7_KMeans_k5/07_confusion_matrices.png
+data/analysis/segment_classification/core_7_KMeans_k5/09_feature_importance_random_forest.csv
+data/analysis/segment_classification/core_7_KMeans_k5/10_feature_importance_random_forest.png
+data/analysis/segment_classification/core_7_KMeans_k5/14_step6_7_classification_summary.md
 ```
 
 위 파일들이 있으면 후속 단계에서 결과를 해석하고 발표 자료에 반영할 수 있다.

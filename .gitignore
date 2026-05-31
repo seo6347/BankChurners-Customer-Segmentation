@@ -9,12 +9,22 @@ Thumbs.db
 
 # Generated analysis outputs can be regenerated from notebooks.
 outputs/
+reports/tables/*.csv
+reports/tables/*.xlsx
 reports/figures/*.html
 reports/figures/*.png
+reports/figures/*.jpg
+reports/figures/*.jpeg
 data/analysis/**/*.html
 data/analysis/**/*.png
 data/analysis/**/*.csv
+data/analysis/**/*.joblib
+data/analysis/**/*.pkl
+data/analysis/segment_classification/
+data/processed/*.csv
+data/processed/*.json
+data/processed/*.pkl
 
-# Keep data folders but avoid accidentally committing raw sensitive data if needed.
-# data/raw/*.csv
-# data/interim/*.csv
+# Keep data folders, but do not commit local raw/interim data files.
+data/raw/*.csv
+data/interim/*.csv

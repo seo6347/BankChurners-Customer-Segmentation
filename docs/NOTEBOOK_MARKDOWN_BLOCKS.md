@@ -96,7 +96,7 @@
 세 가지 feature set을 비교한다.
 
 1. `axis_7`: Step 3.5에서 생성한 7개 행동 축 전체 사용
-2. `axis_6_without_capacity`: 신용한도 규모를 제외하고 실제 이용 행동 중심 6개 축 사용
+2. `core_7`: 최종 모델에 사용하는 7개 행동 축
 3. `weighted_axis_7`: 거래 감소, 활동성, 비활성 신호 등 유지 전략과 직접 연결되는 축에 약한 가중치 부여
 
 최종 모델은 내부 군집 지표뿐 아니라 segment 해석 가능성과 전략 연결성을 함께 고려하여 선택한다.
@@ -134,7 +134,7 @@ clustering 결과는 silhouette score만으로 선택하지 않는다. 본 분�
 ```markdown
 ## 4. Selected Model
 
-최종 선택 모델은 `axis_6_without_capacity_KMeans_k6`이다.
+최종 선택 모델은 `core_7_KMeans_k5`이다.
 
 이 모델은 신용한도 규모보다 실제 이용 행동에 집중하여 고객군을 나누며, cluster size balance, segment별 이탈률 차이, high-risk signal 차이, 해석 가능성 측면에서 가장 균형적인 결과를 보였다.
 ```

@@ -24,5 +24,5 @@
         "3": "거래 감소·저활동·접촉 부담형 초고위험 이탈군",
         "4": "저활동·비감소형 초저위험 안정군"
     },
-    "note": "Step 5 does not refit clustering. It profiles the final core_7_KMeans_k5 labels created in Step 4. High_Risk_Signal_Count is a mean count of customer-level risk flags, not a model rank score."
+    "note": "Step 5는 clustering을 다시 학습하지 않는다. Step 4에서 생성한 최종 core_7_KMeans_k5 label을 profiling한다. High_Risk_Signal_Count는 고객 단위 위험 flag의 평균 개수이며 model rank score가 아니다."
 }

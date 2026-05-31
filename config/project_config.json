@@ -13,8 +13,8 @@
         "docs_dir": "docs"
     },
     "selected_model": {
-        "candidate_key": "axis_6_without_capacity_KMeans_k6",
-        "description": "Credit_Capacity_Score를 제외한 6개 행동 축 기반 K-Means k=6"
+        "candidate_key": "core_7_KMeans_k5",
+        "description": "core_7 행동 축 기반 K-Means k=5 최종 세그먼트 모델"
     },
     "random_state": 42,
     "encoding": "utf-8-sig"

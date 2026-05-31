@@ -6,8 +6,8 @@ Step 4에서 선택한 최종 clustering 결과를 기반으로 각 고객 세�
 
 ## 선택 모델
 
-- Selected key: `axis_6_without_capacity_KMeans_k6`
-- Number of clusters: `6`
+- Selected key: `core_7_KMeans_k5`
+- Number of clusters: `5`
 - Overall attrition rate: `0.1607`
 
 ## 입력 파일
@@ -21,15 +21,13 @@ Step 4에서 선택한 최종 clustering 결과를 기반으로 각 고객 세�
 
 | 파일 | 설명 |
 |---|---|
-| `cluster_axis_profile_mean.csv` | segment별 행동 축 평균 |
-| `final_segment_profiling_table.csv` | segment별 고객 수, 이탈률, 주요 행동 변수, 위험 수준 요약 |
-| `segment_strategy_table.csv` | segment별 해석과 유지·재활성화 전략 |
-| `01_cluster_profile_heatmap.png` | 행동 축 기반 segment profile heatmap |
-| `02_attrition_rate_by_segment.png` | segment별 이탈률 비교 그래프 |
-| `03_segment_size_vs_attrition_bubble.html` | segment 규모와 이탈률 bubble chart |
-| `04_high_risk_signal_by_segment.png` | segment별 high-risk signal 평균 |
-| `categorical_distribution_long.csv` | segment별 범주형 변수 분포 long table |
-| `profile_table_with_segment.csv` | 고객 단위 profile table에 cluster/segment label을 붙인 최종 테이블 |
+| `core_7_KMeans_k5/00_segment_summary_core7_kmeans_k5.csv` | segment별 고객 수, 이탈률, 위험 수준 요약 |
+| `core_7_KMeans_k5/01_segment_profile_standardized.csv` | segment별 표준화 행동 축 평균 |
+| `core_7_KMeans_k5/03_cluster_profile_heatmap_k5.png` | 행동 축 기반 segment profile heatmap |
+| `core_7_KMeans_k5/04_attrition_rate_by_segment_k5.png` | segment별 이탈률 비교 그래프 |
+| `core_7_KMeans_k5/10_segment_strategy_table_k5.csv` | segment별 해석과 유지·재활성화 전략 |
+| `core_7_KMeans_k5/11_profile_table_with_segment_k5.csv` | 고객 단위 profile table에 cluster/segment label을 붙인 최종 테이블 |
+| `core_7_KMeans_k5/12_segment_final_summary_k5.csv` | 보고서용 최종 segment 요약 |
 
 ## 해석 주의사항
 

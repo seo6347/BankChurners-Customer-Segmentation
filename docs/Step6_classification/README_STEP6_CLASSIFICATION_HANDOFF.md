@@ -233,7 +233,7 @@ Step6의 target은 `Attrition_Flag`가 아니므로, 이탈 예측이라고 쓰�
 Step6 결과는 아래 폴더에 저장하는 것을 권장한다.
 
 ```text
-data/analysis/classification/core_7_KMeans_k5/
+data/analysis/segment_classification/core_7_KMeans_k5/
 ```
 
 권장 출력 파일은 다음과 같다.
@@ -241,14 +241,19 @@ data/analysis/classification/core_7_KMeans_k5/
 ```text
 00_input_check.json
 01_classification_metrics_summary.csv
-02_classification_report_by_segment.csv
-03_confusion_matrix.csv
-04_confusion_matrix.png
-05_feature_importance_random_forest.csv
-06_feature_importance_random_forest.png
-07_logistic_regression_coefficients.csv
-08_predicted_segment_table.csv
-09_step6_classification_summary.md
+02_classification_report_{model}.csv
+03_confusion_matrix_{model}.csv
+04_random_forest_tuning_result.csv
+05_cross_validation_summary.csv
+06_model_comparison.png
+07_confusion_matrices.png
+08_c3_performance_summary.csv
+09_feature_importance_random_forest.csv
+10_feature_importance_random_forest.png
+11_logistic_regression_coefficients.csv
+12_logistic_regression_coefficient_heatmap.png
+13_final_logistic_regression_classification_report.csv
+14_step6_7_classification_summary.md
 ```
 
 ---

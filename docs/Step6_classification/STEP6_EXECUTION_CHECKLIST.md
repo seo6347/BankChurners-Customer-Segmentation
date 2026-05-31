@@ -26,7 +26,7 @@ Step6 담당자가 해야 할 일은 다음 5가지이다.
 1. Step5 최종 segment table 불러오기
 2. X = core_7 feature, y = Cluster로 설정
 3. train/test split 수행
-4. Logistic Regression, Decision Tree, Random Forest 학습 및 평가
+4. Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM 학습 및 평가
 5. metrics, confusion matrix, feature importance 저장
 ```
 
@@ -37,7 +37,7 @@ Step6 담당자가 해야 할 일은 다음 5가지이다.
 아래 폴더를 만들어 결과를 저장한다.
 
 ```text
-data/analysis/classification/core_7_KMeans_k5/
+data/analysis/segment_classification/core_7_KMeans_k5/
 ```
 
 최소 제출 파일은 다음이다.
@@ -46,10 +46,11 @@ data/analysis/classification/core_7_KMeans_k5/
 01_classification_metrics_summary.csv
 02_classification_report_random_forest.csv
 03_confusion_matrix_random_forest.csv
-04_confusion_matrix_best_model.png
-05_feature_importance_random_forest.csv
-06_feature_importance_random_forest.png
-09_step6_classification_summary.md
+06_model_comparison.png
+07_confusion_matrices.png
+09_feature_importance_random_forest.csv
+10_feature_importance_random_forest.png
+14_step6_7_classification_summary.md
 ```
 
 ---
@@ -74,7 +75,7 @@ C3 recall이 낮다 = 초고위험군을 다른 세그먼트로 놓친다.
 
 ### Q3. 어떤 feature가 segment 구분에 중요한가?
 
-`05_feature_importance_random_forest.csv`를 확인한다.
+`09_feature_importance_random_forest.csv`를 확인한다.
 
 예상 상위 feature는 다음 중 일부일 가능성이 높다.
 
@@ -122,6 +123,6 @@ Step6은 아래 조건을 만족하면 완료로 본다.
 classification metrics summary가 저장됨
 confusion matrix가 저장됨
 random forest feature importance가 저장됨
-Step6 summary markdown이 저장됨
+Step6/7 summary markdown이 저장됨
 보고서에서 사용할 핵심 해석 문장이 정리됨
 ```

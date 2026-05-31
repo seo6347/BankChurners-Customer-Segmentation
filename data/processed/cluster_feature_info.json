@@ -4,6 +4,7 @@
     "output_files": {
         "cluster_input": "data/processed/BankChurners_cluster_input.csv",
         "profile_table": "data/processed/BankChurners_profile_table.csv",
+        "axis_features": "data/processed/BankChurners_axis_features.csv",
         "axis_features_raw": "data/processed/BankChurners_axis_features_raw.csv",
         "component_features": "data/processed/BankChurners_component_features.csv"
     },
@@ -47,8 +48,8 @@
         "Zero_Utilization_Flag"
     ],
     "notes": [
-        "Attrition_Flag is excluded from clustering input and used only for profiling.",
-        "Demographic and label-encoded categorical variables are excluded from clustering input.",
-        "Credit_Capacity_Score is available for comparison but not required in the core behavior feature set."
+        "Attrition_Flag은 clustering input에서 제외하고 profiling에서만 사용한다.",
+        "범주형 원본과 label-encoded 컬럼은 최종 clustering input에서 제외한다.",
+        "Credit_Capacity_Score는 별도 축 feature로 저장하되 core_7 최종 입력에는 포함하지 않는다."
     ]
 }

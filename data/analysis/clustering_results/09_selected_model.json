@@ -27,7 +27,7 @@
     ],
     "algorithm": "KMeans",
     "k": 5,
-    "selection_method": "manual_override_after_visual_diagnostics: selected core_7_KMeans_k5 based on interpretability, attrition separation, cluster size balance, and comparison with k=4/k=6",
+    "selection_method": "manual_override_after_visual_diagnostics: 해석 가능성, 이탈률 차이, cluster size 균형, k=4/k=6 비교를 기준으로 core_7_KMeans_k5를 최종 선택",
     "manual_override": true,
     "segment_name_map": {
         "0": "상품 관계 중심 저위험 안정군",

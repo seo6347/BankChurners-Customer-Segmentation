@@ -1,26 +1,26 @@
 # Step 4.5 Clustering Visualization Diagnostics
 
-This folder contains visualization outputs for the clustering review shortlist.
+이 폴더는 Step 4 review shortlist 후보의 clustering 진단 시각화 결과를 보관한다.
 
-## Final selected model
+## 최종 선택 모델
 
 - `core_7_KMeans_k5`
 
-A report-ready copy of the final selected model visualizations is saved in:
+보고서와 발표 준비에 바로 참고할 수 있는 최종 모델 시각화 사본은 아래 폴더에 저장된다.
 
 ```text
 _final_selected_model_core7_kmeans_k5/
 ```
 
-## Review candidates
+## 검토 후보
 
 - core_7_KMeans_k4
 - core_7_KMeans_k5
 - core_7_KMeans_k6
 
-## Main outputs
+## 주요 출력 파일
 
-For each candidate, the notebook saves:
+각 후보별로 노트북은 다음 파일을 저장한다.
 
 - `01_cluster_size_summary.csv`
 - `01_cluster_size_ratio.png`
@@ -37,8 +37,9 @@ For each candidate, the notebook saves:
 - `09_3d_direct_behavior_view.html`
 - `10_3d_lda_projection.html`
 
-## Interpretation note
+## 해석 주의사항
 
-These visualizations are diagnostic materials for comparing candidate cluster structures.
-The final segment interpretation and strategy design should be completed in Step 5.
-For this project, the final segment model is fixed as `core_7_KMeans_k5`.
+이 시각화는 후보 cluster 구조를 비교하기 위한 진단 자료이다.
+Scatter plot에서 군집이 완전히 분리되어 보이는지만으로 모델을 선택하지 않는다.
+최종 segment 해석과 전략 설계는 Step 5의 profile heatmap, 이탈률, high-risk signal, strategy table을 중심으로 수행한다.
+이 프로젝트의 최종 segment model은 `core_7_KMeans_k5`로 고정한다.

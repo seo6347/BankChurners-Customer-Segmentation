@@ -1,6 +1,6 @@
 # Step6 결과 해석 템플릿
 
-이 파일은 Step6 실행 후 `09_step6_classification_summary.md`를 보완할 때 사용할 수 있는 템플릿이다.
+이 파일은 Step6/7 실행 후 `14_step6_7_classification_summary.md`를 보완할 때 사용할 수 있는 템플릿이다.
 
 ---
 

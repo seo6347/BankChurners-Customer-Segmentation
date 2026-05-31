@@ -2,6 +2,8 @@
 
 본 문서는 BankChurners 기반 고객 세그먼트 분석에서 사용하는 feature의 의미, 전처리 판단 기준, Step 3.5 Further Preprocessing에서 생성한 파생변수와 행동 축의 계산식을 정리한다.
 
+최종 clustering model은 `core_7_KMeans_k5`이다. 따라서 최종 segment 해석의 기준 feature set은 `core_7`이며, `Credit_Capacity_Score`를 포함한 `core_7_plus_capacity`는 비교 후보 feature set으로만 사용한다.
+
 본 프로젝트의 핵심 원칙은 다음과 같다.
 
 - Clustering은 고객 행동 feature만 사용한다.
@@ -10,6 +12,7 @@
 - 행동 축은 변수 의미와 간단한 데이터 검증 결과를 함께 고려하여 정의한다.
 - 이상치 처리는 분포 확인 후 적용한다.
 - 최종 clustering input과 profiling table을 분리하여 data leakage와 해석 오류를 방지한다.
+- Step 6/7 feature importance는 이탈 원인 중요도가 아니라, 최종 segment label을 재현하는 classification에서의 segment 구분 중요도로 해석한다.
 
 ---
 
@@ -105,6 +108,17 @@ Q1과 Q4는 특정 연도의 1분기/4분기라기보다, 데이터에서 관측
 
 거래 변화율 변수는 일부 극단값이 존재할 수 있으므로, Step 3.5에서 분포를 확인한다. 확인 항목은 `min`, `q01`, `median`, `q99`, `max`, IQR fence, IQR fence 밖의 row 수이다.
 
+최종 실행 기준 clipping threshold는 다음 파일에 저장되어 있다.
+
+```text
+data/processed/clipping_thresholds.json
+```
+
+| Feature | lower q01 | upper q99 |
+|---|---:|---:|
+| `Total_Ct_Chng_Q4_Q1` | 0.231 | 1.455 |
+| `Total_Amt_Chng_Q4_Q1` | 0.34026 | 1.51474 |
+
 Clipping 공식은 다음과 같다.
 
 ```text
@@ -184,6 +198,20 @@ Zero_Utilization_Flag = 1 if Avg_Utilization_Ratio = 0 else 0
 ## 6. High-risk signal feature
 
 High-risk signal은 segment가 실제 고위험 행동 신호를 얼마나 포함하는지 사후 검증하기 위한 변수이다. Clustering input에는 사용하지 않는다.
+
+최종 실행 기준 threshold는 다음 파일에 저장되어 있다.
+
+```text
+data/processed/risk_signal_thresholds.json
+```
+
+| 기준 | 값 |
+|---|---:|
+| `ct_change_q20` | 0.545 |
+| `amt_change_q20` | 0.604 |
+| `trans_ct_q20` | 41.0 |
+| `high_inactive_threshold` | 4 |
+| `high_contact_threshold` | 4 |
 
 ### 6.1 개별 flag
 
@@ -320,7 +348,9 @@ A_k = (a_k - mean(a_k)) / std(a_k)
 
 ---
 
-## 10. 최종 feature set
+## 10. 비교 feature set과 최종 채택 feature set
+
+최종 채택 모델은 `core_7_KMeans_k5`이다. 따라서 발표와 최종 segment 해석에서 중심이 되는 feature set은 `core_7`이다.
 
 ### 10.1 `core_7`
 
@@ -343,20 +373,27 @@ core_7
 
 `Credit_Capacity_Score`는 고객 신용한도 규모를 나타내지만, 카드 이용 행동 자체보다는 고객 규모 또는 잠재 가치에 가까우므로 별도 후보 feature set에서 비교한다.
 
+`core_7_plus_capacity`는 Step 4 후보 비교에 사용될 수 있지만, 최종 segment model의 기준 feature set은 아니다.
+
 ---
 
 ## 11. 최종 산출 파일
 
 | 파일 | 역할 |
 |---|---|
-| `data/processed/BankChurners_cluster_input.csv` | Step 4 clustering 입력 데이터 |
+| `data/processed/BankChurners_cluster_input.csv` | Step 4 clustering 후보 feature pool. `core_7`과 `core_7_plus_capacity` 후보를 만들 수 있는 표준화 행동 축 데이터 |
+| `data/processed/BankChurners_axis_features.csv` | `BankChurners_cluster_input.csv`와 같은 표준화 행동 축 데이터. 최종 실행 산출물 호환성을 위해 별도 이름으로도 저장 |
 | `data/processed/BankChurners_profile_table.csv` | Step 5 segment profiling 해석용 데이터 |
 | `data/processed/BankChurners_axis_features_raw.csv` | axis-level standardization 전 행동 축 |
 | `data/processed/BankChurners_component_features.csv` | 행동 축 생성 전 component feature |
 | `data/processed/feature_design_evidence.csv` | 행동 축 설계 근거 요약 |
 | `data/processed/change_rate_outlier_summary.csv` | 변화율 변수 이상치 검토 요약 |
+| `data/processed/clipping_thresholds.json` | 변화율 clipping에 사용한 q01/q99 threshold |
 | `data/processed/relationship_count_evidence.csv` | 관계 상품 수별 이탈률 검토 요약 |
 | `data/processed/risk_signal_summary.csv` | high-risk signal flag 비율 및 이탈률 요약 |
+| `data/processed/risk_signal_thresholds.json` | high-risk signal flag 생성에 사용한 threshold |
+| `data/processed/preprocessing_scalers.pkl` | component-level 및 axis-level standardization scaler |
+| `data/processed/preprocessing_validation_summary.csv` | 행 수, 컬럼 수, 결측치 검증 요약 |
 | `data/processed/cluster_feature_info.json` | feature set 및 metadata |
 
 ---
@@ -364,6 +401,9 @@ core_7
 ## 12. 해석상 주의점
 
 - 본 데이터는 정확한 수집 시작일과 종료일을 제공하지 않는다. 따라서 분석은 특정 연도에 대한 시계열 분석이 아니라 최근 12개월 행동 feature 기반의 횡단면적 고객 세그먼트 분석으로 해석한다.
+- 본 데이터에는 모바일 결제 또는 앱 결제 사용 여부를 직접 나타내는 변수가 없다.
 - `Total_Relationship_Count`는 쇼핑 물품 수가 아니라 은행 상품 보유 수이다.
 - `Attrition_Flag`는 행동 축 생성과 clustering input에 사용하지 않는다.
 - High-risk signal은 cluster를 만드는 기준이 아니라, 도출된 segment의 위험 특성을 사후 검증하는 기준이다.
+- Step 6/7 classification의 target은 `Attrition_Flag`가 아니라 최종 K-Means k=5 segment label인 `Cluster`이다.
+- Step 6/7 feature importance와 Logistic Regression coefficient는 segment label 재현/배정 기준의 설명력으로 해석하며, 이탈 원인이나 이탈 예측 중요도로 해석하지 않는다.

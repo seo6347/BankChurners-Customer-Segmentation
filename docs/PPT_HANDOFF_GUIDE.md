@@ -40,6 +40,11 @@ PPT에서 가장 강조해야 할 결과는 최종 5개 segment의 행동 프로
 
 최종 clustering input은 core_7 행동 feature이다.
 
+해당 core_7 행동 feature에서 각 feature는 원본 csv 파일에 있는 feature가 아닌,
+기존 feature들을 바탕으로 생성한 파생 변수이다.
+따라서 해당 feature들이 어떻게 어떤 공식으로 생성되었는지 확인하려면
+docs/FEATURE_DESCRIPTION.md 파일을 확인하면 된다.
+
 | Feature | 한 줄 의미 | Segment 구분에 도움이 되는 이유 |
 |---|---|---|
 | `Activity_Score` | 거래 횟수와 거래 금액을 바탕으로 한 카드 사용 활성도 | 고활동 고객과 저활동 고객을 구분한다. C2는 높고 C3, C4는 낮다. |
@@ -115,7 +120,7 @@ Random Forest tuning 결과 `data/analysis/segment_classification/core_7_KMeans_
 
 ## 7. Step 6/7 해석 가이드
 
-Step 6/7은 매우 조심해서 설명해야 한다.
+Step 6/7은 조심해서 설명해야 한다.
 
 Step 6의 target은 `Attrition_Flag`가 아니다. Target은 Step 4/5에서 확정된 최종 K-Means k=5 segment label인 `Cluster`이다. Input은 `Activity_Score`, `Count_Decline_Risk_Score`, `Amount_Decline_Risk_Score`, `Inactivity_Score`, `Product_Relationship_Score`, `Contact_Burden_Score`, `Credit_Utilization_Score`로 구성된 core_7 행동 feature이다.
 

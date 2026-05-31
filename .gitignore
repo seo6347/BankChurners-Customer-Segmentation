@@ -28,3 +28,23 @@ data/processed/*.pkl
 # Keep data folders, but do not commit local raw/interim data files.
 data/raw/*.csv
 data/interim/*.csv
+
+# PPT handoff artifacts are intentionally tracked so slide authors can work
+# without rerunning notebooks.
+!data/analysis/clustering_results/01_clustering_candidate_metrics.csv
+!data/analysis/clustering_results/02_candidate_profile_summary_long.csv
+!data/analysis/clustering_results/03_model_selection_score.csv
+!data/analysis/clustering_results/04_candidate_metrics_sorted.csv
+!data/analysis/clustering_results/04_final_model_comparison_core7_kmeans_k456.csv
+!data/analysis/clustering_results/05_review_shortlist_core7_kmeans_k456.csv
+!data/analysis/clustering_results/10_selected_model_profile_summary.csv
+!data/analysis/clustering_results/13_final_customer_segments_core7_kmeans_k5.csv
+!data/analysis/clustering_visualizations/00_final_selected_visual_diagnostic_summary.csv
+!data/analysis/clustering_visualizations/00_review_shortlist_visual_diagnostics_summary.csv
+!data/analysis/clustering_visualizations/_final_selected_model_core7_kmeans_k5/
+!data/analysis/clustering_visualizations/_final_selected_model_core7_kmeans_k5/**
+!data/analysis/segment_profiling/core_7_KMeans_k5/
+!data/analysis/segment_profiling/core_7_KMeans_k5/**
+!data/analysis/segment_classification/
+!data/analysis/segment_classification/core_7_KMeans_k5/
+!data/analysis/segment_classification/core_7_KMeans_k5/**

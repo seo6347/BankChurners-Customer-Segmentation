@@ -1,0 +1,11 @@
+﻿Cluster,Cluster_Label,Segment_Name,variable,category,ratio,ratio_percent
+0,C0,상품 관계 중심 저위험 안정군,Attrition_Label,Attrited Customer,0.08638853771597134,8.638853771597134
+1,C1,신용 활용 중심 저위험 금융활용군,Attrition_Label,Attrited Customer,0.08193091231178033,8.193091231178034
+2,C2,고활동·저관계 잠재 전환군,Attrition_Label,Attrited Customer,0.08132530120481928,8.132530120481928
+3,C3,거래 감소·저활동·접촉 부담형 초고위험 이탈군,Attrition_Label,Attrited Customer,0.4595216191352346,45.95216191352346
+4,C4,저활동·비감소형 초저위험 안정군,Attrition_Label,Attrited Customer,0.04909819639278557,4.909819639278557
+0,C0,상품 관계 중심 저위험 안정군,Attrition_Label,Existing Customer,0.9136114622840287,91.36114622840287
+1,C1,신용 활용 중심 저위험 금융활용군,Attrition_Label,Existing Customer,0.9180690876882197,91.80690876882197
+2,C2,고활동·저관계 잠재 전환군,Attrition_Label,Existing Customer,0.9186746987951807,91.86746987951807
+3,C3,거래 감소·저활동·접촉 부담형 초고위험 이탈군,Attrition_Label,Existing Customer,0.5404783808647654,54.04783808647654
+4,C4,저활동·비감소형 초저위험 안정군,Attrition_Label,Existing Customer,0.9509018036072144,95.09018036072145

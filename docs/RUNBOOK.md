@@ -1,6 +1,6 @@
 # 실행 안내서
 
-이 문서는 프로젝트를 처음 받은 팀원이 같은 순서로 분석을 재생성하기 위한 실행 기준이다. PPT 인수인계 문서는 아직 만들지 않는다.
+이 문서는 프로젝트를 처음 받은 팀원이 같은 순서로 분석을 재생성하기 위한 실행 기준이다. PPT 제작자는 `docs/PPT_HANDOFF_GUIDE.md`와 Git에 포함된 PPT handoff 산출물을 함께 확인하면 된다.
 
 ## 1. 처음 받은 사람이 할 일
 
@@ -60,6 +60,8 @@ Step 6/7은 XGBoost와 LightGBM을 비교 모델에 포함하므로 `xgboost`, `
 
 `data/raw/`, `data/interim/`, `data/processed/`, `data/analysis/`, `outputs/`, `reports/figures/`, `reports/tables/`의 생성 산출물은 대부분 재생성 가능하므로 일반적으로 commit하지 않는다. 문서화에 반드시 필요한 소수의 결과 파일만 팀 합의 후 commit한다.
 
+현재 Git에 포함하는 예외 산출물은 PPT handoff용 결과물이다. 범위는 최종 모델 선정 요약, 최종 k=5 클러스터 시각화, Step 5 segment profiling 표/이미지/HTML, Step 6/7 segment assignment 보조 결과로 제한한다.
+
 이미 추적된 생성 파일은 로컬 파일을 삭제하지 않고 Git 추적만 해제한다. 아래 명령은 사용자가 직접 확인 후 실행한다.
 
 ```bash
@@ -90,6 +92,7 @@ git add data/raw/.gitkeep data/interim/.gitkeep data/processed/.gitkeep data/ana
 
 ## 7. PPT 제작 전 체크리스트
 
+- 저장소를 받은 뒤 별도 실행 없이 아래 산출물 경로가 열리는지 확인한다.
 - 최종 모델 metadata가 `core_7_KMeans_k5`인지 확인한다.
 - Step 4.5 최종 시각화 폴더가 생성되었는지 확인한다.
 - Step 5 segment strategy table과 profile table이 생성되었는지 확인한다.

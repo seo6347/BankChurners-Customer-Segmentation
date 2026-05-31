@@ -93,8 +93,11 @@ Feature importance도 이탈 원인 중요도가 아니라 segment classificatio
 
 ## PPT 준비 전 주요 결과물 위치
 
+PPT 담당자가 노트북을 다시 실행하지 않아도 발표 자료를 만들 수 있도록, 아래 핵심 산출물은 Git에 포함한다.
+
 ```text
 data/analysis/clustering_results/09_selected_model.json
+data/analysis/clustering_results/04_final_model_comparison_core7_kmeans_k456.csv
 data/analysis/clustering_visualizations/_final_selected_model_core7_kmeans_k5/
 data/analysis/segment_profiling/core_7_KMeans_k5/10_segment_strategy_table_k5.csv
 data/analysis/segment_profiling/core_7_KMeans_k5/11_profile_table_with_segment_k5.csv
@@ -105,6 +108,8 @@ data/analysis/segment_classification/core_7_KMeans_k5/
 ## 생성 파일 Git 관리 원칙
 
 `data/raw/`, `data/interim/`, `data/processed/`, `data/analysis/`, `outputs/`, `reports/`의 분석 산출물은 대부분 재생성 가능하므로 기본적으로 commit하지 않는다. 발표나 문서화에 필요한 산출물만 팀 합의 후 예외적으로 commit한다.
+
+현재 예외적으로 추적하는 산출물은 PPT handoff용 결과물이다. 범위는 최종 모델 선정 요약, 최종 k=5 클러스터 시각화, Step 5 segment profiling 표/이미지/HTML, Step 6/7 segment assignment 보조 결과로 제한한다.
 
 이미 Git에 추적된 생성 파일은 로컬 파일을 삭제하지 않고 추적만 해제한다. 아래 명령은 사용자가 직접 확인 후 실행한다.
 

@@ -1,0 +1,2 @@
+﻿model,best_params,best_cv_macro_f1,test_accuracy,test_macro_f1
+Random Forest tuned,"{'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}",0.9292278229386469,0.9422507403751234,0.9385820295655863

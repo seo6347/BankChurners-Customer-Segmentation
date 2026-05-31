@@ -1,0 +1,101 @@
+﻿Cluster,variable,category,ratio
+0,Card_Label,Blue,0.932920536635707
+1,Card_Label,Blue,0.862970297029703
+2,Card_Label,Blue,0.9334990677439403
+3,Card_Label,Blue,0.9995911692559281
+0,Card_Label,Gold,0.011867905056759546
+1,Card_Label,Gold,0.02811881188118812
+2,Card_Label,Gold,0.006836544437538844
+3,Card_Label,Gold,0.0
+0,Card_Label,Platinum,0.0005159958720330237
+1,Card_Label,Platinum,0.005544554455445544
+2,Card_Label,Platinum,0.0015537600994406464
+3,Card_Label,Platinum,0.0
+0,Card_Label,Silver,0.054695562435500514
+1,Card_Label,Silver,0.10336633663366336
+2,Card_Label,Silver,0.058110627719080175
+3,Card_Label,Silver,0.0004088307440719542
+0,Income_Label,$120K +,0.08359133126934984
+1,Income_Label,$120K +,0.08475247524752476
+2,Income_Label,$120K +,0.09477936606587943
+3,Income_Label,$120K +,0.018806214227309895
+0,Income_Label,$40K - $60K,0.16202270381836945
+1,Income_Label,$40K - $60K,0.17504950495049504
+2,Income_Label,$40K - $60K,0.16749533871970168
+3,Income_Label,$40K - $60K,0.20237121831561733
+0,Income_Label,$60K - $80K,0.16047471620227038
+1,Income_Label,$60K - $80K,0.14653465346534653
+2,Income_Label,$60K - $80K,0.16407706650093226
+3,Income_Label,$60K - $80K,0.07890433360588717
+0,Income_Label,$80K - $120K,0.18421052631578946
+1,Income_Label,$80K - $120K,0.16396039603960397
+2,Income_Label,$80K - $120K,0.1858297078931013
+3,Income_Label,$80K - $120K,0.0678659035159444
+0,Income_Label,Less than $40K,0.28328173374613
+1,Income_Label,Less than $40K,0.31722772277227723
+2,Income_Label,Less than $40K,0.2697327532628962
+3,Income_Label,Less than $40K,0.5490596892886345
+0,Income_Label,Unknown,0.1264189886480908
+1,Income_Label,Unknown,0.11247524752475248
+2,Income_Label,Unknown,0.11808576755748912
+3,Income_Label,Unknown,0.08299264104660671
+0,Gender_Label,F,0.45252837977296184
+1,Gender_Label,F,0.49663366336633663
+2,Gender_Label,F,0.4443753884400249
+3,Gender_Label,F,0.7346688470973017
+0,Gender_Label,M,0.5474716202270382
+1,Gender_Label,M,0.5033663366336634
+2,Gender_Label,M,0.5556246115599751
+3,Gender_Label,M,0.26533115290269826
+0,Education_Label,College,0.09803921568627451
+1,Education_Label,College,0.10257425742574257
+2,Education_Label,College,0.10130515848353014
+3,Education_Label,College,0.0973017170891251
+0,Education_Label,Doctorate,0.03663570691434469
+1,Education_Label,Doctorate,0.04396039603960396
+2,Education_Label,Doctorate,0.05158483530142946
+3,Education_Label,Doctorate,0.04210956663941128
+0,Education_Label,Graduate,0.30082559339525283
+1,Education_Label,Graduate,0.3081188118811881
+2,Education_Label,Graduate,0.3141702921068987
+3,Education_Label,Graduate,0.3090760425183974
+0,Education_Label,High School,0.19762641898864808
+1,Education_Label,High School,0.19801980198019803
+2,Education_Label,High School,0.19701678060907396
+3,Education_Label,High School,0.2027800490596893
+0,Education_Label,Post-Graduate,0.0500515995872033
+1,Education_Label,Post-Graduate,0.049900990099009904
+2,Education_Label,Post-Graduate,0.049720323182100686
+3,Education_Label,Post-Graduate,0.05437448896156991
+0,Education_Label,Uneducated,0.1651186790505676
+1,Education_Label,Uneducated,0.13980198019801982
+2,Education_Label,Uneducated,0.14045991298943444
+3,Education_Label,Uneducated,0.14799672935404742
+0,Education_Label,Unknown,0.15170278637770898
+1,Education_Label,Unknown,0.15762376237623762
+2,Education_Label,Unknown,0.14574269732753262
+3,Education_Label,Unknown,0.1463614063777596
+0,Marital_Label,Divorced,0.0737874097007224
+1,Marital_Label,Divorced,0.07485148514851485
+2,Marital_Label,Divorced,0.07364822871348664
+3,Marital_Label,Divorced,0.0731807031888798
+0,Marital_Label,Married,0.5030959752321982
+1,Marital_Label,Married,0.4273267326732673
+2,Marital_Label,Married,0.4661280298321939
+3,Marital_Label,Married,0.4632052330335241
+0,Marital_Label,Single,0.35190918472652216
+1,Marital_Label,Single,0.417029702970297
+2,Marital_Label,Single,0.3881292728402735
+3,Marital_Label,Single,0.3920686835650041
+0,Marital_Label,Unknown,0.07120743034055728
+1,Marital_Label,Unknown,0.0807920792079208
+2,Marital_Label,Unknown,0.07209446861404599
+3,Marital_Label,Unknown,0.07154538021259199
+0,Attrition_Label,Attrited Customer,0.0717234262125903
+1,Attrition_Label,Attrited Customer,0.07881188118811881
+2,Attrition_Label,Attrited Customer,0.3387197016780609
+3,Attrition_Label,Attrited Customer,0.08135731807031889
+0,Attrition_Label,Existing Customer,0.9282765737874097
+1,Attrition_Label,Existing Customer,0.9211881188118812
+2,Attrition_Label,Existing Customer,0.6612802983219391
+3,Attrition_Label,Existing Customer,0.9186426819296811
